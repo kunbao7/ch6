@@ -1,0 +1,24 @@
+<html5>
+    <head>
+        <meta charset="utf-8">
+        <title>天气查询系统</title>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>天气查询系统</h1>
+            <form action="/" method="POST" >
+	            <label>城市名：</label>
+	            <input type="text" name="city_name">
+	            <input type="submit" name="query" value="查询">
+	            <input type="submit" name="history" value="历史">
+	            <input type="submit" name="help" value="帮助">
+
+                <hr/>
+	            {% for inf in info %}
+	            {{inf}}<br>
+	            {% endfor %}
+            </form>
+        </div>
+    </body>
+</html5>
